@@ -2,9 +2,10 @@ import "./App.css";
 import { Routes, Route } from "react-router";
 import HomePage from "./pages/HomePage";
 import SignUp from "./pages/SignUp";
-import { useState, useEffect } from "react"; // object destructuring
+import { useState, useEffect } from "react";
 import { supabase } from "./utils/supabase";
 import { SessionContext } from "./contexts/SessionContext";
+import Login from "./pages/Login";
 
 function App() {
 	const [session, setSession] = useState(null);
@@ -32,6 +33,7 @@ function App() {
 			<Routes>
 				<Route path="/" element={<HomePage />} />
 				<Route path="/sign-up" element={<SignUp />} />
+				<Route path="/log-in" element={<Login />} />
 			</Routes>
 		</SessionContext.Provider>
 	);

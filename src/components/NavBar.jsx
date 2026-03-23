@@ -5,6 +5,7 @@ import HomeIcon from "./icons/HomeIcon";
 import { useContext } from "react";
 import { SessionContext } from "../contexts/SessionContext";
 import { supabase } from "../utils/supabase";
+import LoginIcon from "./icons/LoginIcon";
 
 const NavBar = () => {
 	const session = useContext(SessionContext);
@@ -32,13 +33,24 @@ const NavBar = () => {
 						Home
 					</NavLink>
 					{!session && (
-						<NavLink
-							to="/sign-up"
-							className="btn btn-primary mr-4 rounded-full"
-						>
-							<SignUpIcon className="text-lg" />
-							Sign Up
-						</NavLink>
+						// fragment
+						<>
+							<NavLink
+								to="/sign-up"
+								className="btn btn-primary mr-4 rounded-full"
+							>
+								<SignUpIcon className="text-lg" />
+								Sign Up
+							</NavLink>
+
+							<NavLink
+								to="/log-in"
+								className="btn btn-primary mr-4 rounded-full"
+							>
+								<LoginIcon className="text-xl" />
+								Login
+							</NavLink>
+						</>
 					)}
 					<div className="dropdown dropdown-end">
 						<div
