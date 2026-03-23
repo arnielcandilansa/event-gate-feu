@@ -1,6 +1,8 @@
 import Input from "../components/form/Input";
 import MainLayout from "../layouts/MainLayout";
 import Card from "../components/Card";
+import SignUpIcon from "../components/icons/SignUpIcon";
+import SendIcon from "../components/icons/SendIcon";
 
 const SignUp = () => {
 	return (
@@ -34,7 +36,7 @@ const SignUp = () => {
 							type="password"
 						/>
 						<button className="btn btn-primary rounded-full mt-5">
-							Submit
+							<SendIcon className="text-sm" /> Submit
 						</button>
 					</Card>
 				</div>
