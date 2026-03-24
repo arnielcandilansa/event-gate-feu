@@ -3,6 +3,7 @@ import MainLayout from "../layouts/MainLayout";
 import { supabase } from "../utils/supabase";
 import { SessionContext } from "../contexts/SessionContext";
 import { Link } from "react-router";
+import EditUserIcon from "../components/icons/EditUserIcon";
 
 const Profile = () => {
 	const session = useContext(SessionContext);
@@ -36,6 +37,7 @@ const Profile = () => {
 				</div>
 				<div>
 					<Link to="/edit-profile" className="btn btn-primary rounded-full">
+						<EditUserIcon className="text-lg" />
 						Edit Profile
 					</Link>
 				</div>
