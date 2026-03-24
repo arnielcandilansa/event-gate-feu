@@ -52,6 +52,9 @@ const NavBar = () => {
 							</NavLink>
 						</>
 					)}
+					{/* nullish value, undefined, "", 0, null */}
+					{/* if session is not nullish value then execute whatever code after the && */}
+					{/* if session is nullish then execute whatever code right after the &&*/}
 					{session && (
 						<div className="dropdown dropdown-end">
 							<div
