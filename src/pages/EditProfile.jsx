@@ -6,9 +6,11 @@ import SendIcon from "../components/icons/SendIcon";
 import { supabase } from "../utils/supabase";
 import { useContext } from "react";
 import { SessionContext } from "../contexts/SessionContext";
+import { useNavigate } from "react-router";
 
 const EditProfile = () => {
 	const session = useContext(SessionContext);
+	const navigate = useNavigate();
 
 	const handleSubmit = async (event) => {
 		event.preventDefault();
@@ -27,9 +29,13 @@ const EditProfile = () => {
 				lastname: signupForm.lastname,
 				email: signupForm.email,
 			})
-			.eq("id", session.user.id);
+			.eq("id", session.user.id)
+			.select();
 
 		if (profileError) alert(profileError);
+		if (profileData) {
+			navigate("/profile");
+		}
 	};
 
 	return (
