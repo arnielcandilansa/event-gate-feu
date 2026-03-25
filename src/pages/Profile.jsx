@@ -6,7 +6,7 @@ import { Link } from "react-router";
 import EditUserIcon from "../components/icons/EditUserIcon";
 
 const Profile = () => {
-	const session = useContext(SessionContext);
+	const { session } = useContext(SessionContext);
 	const [profile, setProfile] = useState(null);
 
 	useEffect(() => {
