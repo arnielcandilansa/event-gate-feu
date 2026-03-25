@@ -52,12 +52,15 @@ const AddEvent = () => {
 								<legend className="fieldset-legend">Description</legend>
 								<textarea
 									className="textarea h-full w-full"
-									placeholder="Bio"
+									placeholder="Description"
 									rows={20}
 									name="description"
 								></textarea>
 							</fieldset>
 						</div>
+					</div>
+					<div className="text-right mt-5">
+						<button className="btn btn-primary rounded-full">Save Event</button>
 					</div>
 				</form>
 			</div>
