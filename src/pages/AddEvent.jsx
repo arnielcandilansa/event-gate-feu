@@ -10,7 +10,12 @@ const AddEvent = () => {
 					<div className="flex">
 						<div className="w-1/3">
 							{/* title, start date, end date, start time, end time, location */}
-							<Input type="text" label="Title" placeholder="Enter Title" />
+							<Input
+								type="text"
+								label="Title"
+								placeholder="Enter Title"
+								name="title"
+							/>
 							<Input
 								type="date"
 								label="Start Date"
