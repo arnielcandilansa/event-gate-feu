@@ -100,9 +100,8 @@ const EventForm = ({ eventData = null }) => {
 								placeholder="Description"
 								rows={20}
 								name="description"
-							>
-								{eventData?.description}
-							</textarea>
+								defaultValue={eventData?.description}
+							></textarea>
 						</fieldset>
 					</div>
 				</div>
